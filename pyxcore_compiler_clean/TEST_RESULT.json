@@ -1,0 +1,6 @@
+{
+  "compile_errors": [],
+  "files_generated": 53,
+  "ok": true,
+  "note": "Build testou sintaxe Python. Testes de execução devem ser rodados no terminal com pyx doctor e pyx run examples/hello.pyx."
+}

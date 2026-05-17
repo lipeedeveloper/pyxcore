@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pyxcore"
+version = "0.1.0"
+description = "PyxCore programming language compiler"
+requires-python = ">=3.10"
+authors = [{name = "Lipe Developer / Emanuel Felipe"}]
+readme = "README.md"
+[project.scripts]
+pyx = "pyxcore.cli:main"
+[tool.setuptools.packages.find]
+include = ["pyxcore*"]
