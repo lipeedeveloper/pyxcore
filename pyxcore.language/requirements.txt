@@ -1,0 +1,2 @@
+# Base PyxCore has no required third-party dependencies.
+# Optional: pip install -e ".[llvm,server,dev]"

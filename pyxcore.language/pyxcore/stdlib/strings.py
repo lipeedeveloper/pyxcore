@@ -1,0 +1,5 @@
+def upper(s): return str(s).upper()
+def lower(s): return str(s).lower()
+def trim(s): return str(s).strip()
+def split(s,sep=None): return str(s).split(sep)
+def contains(s,part): return str(part) in str(s)
