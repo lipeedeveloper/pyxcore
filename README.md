@@ -10,7 +10,7 @@
 
 <div align="center">
   <p>
-    <strong>Uma linguagem de programação moderna, expressiva e em desenvolvimento, criada para transformar ideias, café e persistência em sistemas reais.</strong>
+    <strong>Uma linguagem de programação experimental, limpa e organizada, criada para estudar compiladores, AST, runtime e evolução de linguagens.</strong>
   </p>
 </div>
 
@@ -18,22 +18,11 @@
 
 <div align="center">
 
+<img src="https://img.shields.io/badge/status-em%20desenvolvimento-111827?style=for-the-badge&labelColor=000000" />
+<img src="https://img.shields.io/badge/language-pyxcore-6366f1?style=for-the-badge&labelColor=000000" />
+<img src="https://img.shields.io/badge/compiler-python-22c55e?style=for-the-badge&labelColor=000000" />
+<img src="https://img.shields.io/badge/runtime-interpreter-f97316?style=for-the-badge&labelColor=000000" />
 
-
-###
-
-
-</div>
-
-###
-</div>
-
-###
-
-<div align="center">
-  <p>
-   
-  </p>
 </div>
 
 ---
@@ -43,13 +32,11 @@
   Sobre a PyxCore
 </h2>
 
-**PyxCore** é uma linguagem de programação em desenvolvimento, criada com foco em clareza, organização, aprendizado de compiladores e evolução técnica.
+**PyxCore** é uma linguagem de programação experimental em desenvolvimento, criada com foco em clareza, organização e aprendizado sobre construção de compiladores.
 
-O projeto foi pensado para servir como uma base real de linguagem, com compilador próprio, runtime experimental, biblioteca padrão inicial, ferramentas de desenvolvimento e uma estrutura preparada para crescer com o tempo.
+O projeto atual possui uma base limpa para transformar código `.pyx` em tokens, gerar uma AST, realizar uma análise semântica inicial e executar o programa por meio de um runtime interpretado.
 
-A PyxCore ainda não é uma linguagem pronta para produção. Ela está em fase de construção e evolução, com recursos funcionais, módulos experimentais e partes planejadas para versões futuras.
-
-O objetivo do projeto é construir uma linguagem com identidade própria, mantendo uma base simples de entender, fácil de modificar e organizada o suficiente para receber recursos avançados no futuro.
+Esta versão **não inclui IA, Groq, comandos `ask`, LSP, LLVM, JIT, package registry ou website de documentação**. O foco desta fase é estabilizar o núcleo real da linguagem e evitar promessas que ainda não existem no código.
 
 ---
 
@@ -97,55 +84,45 @@ lipeedeveloper
   Estado atual do projeto
 </h2>
 
-A PyxCore possui uma base funcional, mas ainda está em desenvolvimento. As partes abaixo representam o estado real do projeto.
+A PyxCore possui uma base funcional, mas ainda está em desenvolvimento. Abaixo está o estado real desta versão.
 
 ### <img src="https://api.iconify.design/material-symbols/check-circle.svg?color=%2322c55e" width="22" /> Implementado
 
-- Lexer funcional para tokens básicos da linguagem;
-- Parser funcional para funções, variáveis, chamadas, blocos, condicionais, loops e retornos;
-- AST com nós estruturados;
-- Analisador semântico inicial com escopos e símbolos;
-- Interpretador simples para executar AST;
-- VM de bytecode baseada em stack;
-- Biblioteca padrão inicial em Python;
-- CLI instalável via `pyproject.toml`;
-- Comandos para executar código, visualizar tokens, visualizar AST, formatar arquivos e rodar testes;
-- Formatador simples para arquivos `.pyx`;
-- Test runner usando `unittest`;
-- LSP experimental com autocomplete, hover e diagnósticos básicos;
-- Package registry local experimental usando FastAPI;
-- Backend LLVM experimental usando `llvmlite`;
-- JIT experimental usando `llvmlite`;
-- Garbage collector experimental baseado em mark-and-sweep simulado;
-- Documentação local em Markdown;
+- Lexer funcional;
+- Parser funcional;
+- AST estruturada;
+- Análise semântica inicial;
+- Runtime interpretado;
+- Bytecode VM simples;
+- Formatter simples;
+- Test runner para arquivos `.pyx`;
+- CLI `pyx`;
+- Comando para criar projeto;
+- Comando para executar arquivos `.pyx`;
+- Comando para verificar código;
+- Comando para visualizar tokens;
+- Comando para visualizar AST;
+- Comando REPL básico;
+- Instalador simples para Windows;
 - Exemplos em `.pyx`.
 
 ### <img src="https://api.iconify.design/material-symbols/science.svg?color=%2306b6d4" width="22" /> Experimental
 
-- LLVM backend;
-- LLVM JIT;
-- Garbage collector;
-- Package registry;
-- LSP;
-- Pattern matching;
-- Generics;
-- Otimizações SSA;
-- Debugger.
-
-Essas partes existem como base técnica, mas ainda não representam uma implementação completa de linguagem de produção.
+- VM de bytecode simples;
+- REPL inicial;
+- Análise semântica básica;
+- Formatter por indentação simples.
 
 ### <img src="https://api.iconify.design/material-symbols/pending-actions.svg?color=%23facc15" width="22" /> Planejado
 
-- Sistema de tipos completo;
-- Imports e módulos integrados ao parser principal;
+- Sistema de tipos;
+- Imports e módulos;
 - Biblioteca padrão em `.pyx`;
-- Integração completa da AST com LLVM;
+- Melhorias nas mensagens de erro;
 - VM com instruction set maior;
-- Debugger integrado à VM;
-- LSP completo seguindo o protocolo oficial;
-- Package manager com lockfile;
-- Registry de pacotes mais robusto;
-- Mais testes automatizados;
+- Gerador de bytecode real a partir da AST;
+- Debugger integrado;
+- Testes automatizados mais completos;
 - Documentação técnica expandida.
 
 ---
@@ -155,23 +132,23 @@ Essas partes existem como base técnica, mas ainda não representam uma implemen
   Propósito da linguagem
 </h2>
 
-A PyxCore foi criada para ser uma linguagem simples de escrever, fácil de entender e preparada para crescer de forma organizada.
+A PyxCore foi criada para ser uma linguagem simples de escrever, fácil de entender e boa para estudar como uma linguagem de programação funciona por dentro.
 
-O propósito principal é reduzir complexidade desnecessária sem limitar a evolução técnica do projeto. A ideia é permitir que o código seja limpo, previsível e agradável de manter.
+O objetivo principal é construir uma base real e organizada, sem misturar recursos falsos ou incompletos no README.
 
-A PyxCore busca resolver três pontos importantes:
+A PyxCore busca resolver três pontos:
 
-### <img src="https://api.iconify.design/material-symbols/check-circle.svg?color=%2322c55e" width="22" /> Código mais claro
+### <img src="https://api.iconify.design/material-symbols/check-circle.svg?color=%2322c55e" width="22" /> Código simples
 
-A linguagem valoriza uma sintaxe objetiva, onde cada parte do código tenha uma intenção fácil de entender.
+Sintaxe direta, com funções, variáveis, condições, loops e chamadas de função.
 
-### <img src="https://api.iconify.design/material-symbols/account-tree.svg?color=%2306b6d4" width="22" /> Organização desde a base
+### <img src="https://api.iconify.design/material-symbols/account-tree.svg?color=%2306b6d4" width="22" /> Arquitetura organizada
 
-O projeto foi estruturado com módulos separados para compilador, runtime, stdlib, VM, LSP, testes e ferramentas.
+Separação clara entre lexer, parser, AST, semântica, runtime, VM e ferramentas.
 
-### <img src="https://api.iconify.design/material-symbols/bolt.svg?color=%23facc15" width="22" /> Evolução técnica
+### <img src="https://api.iconify.design/material-symbols/bolt.svg?color=%23facc15" width="22" /> Evolução gradual
 
-A arquitetura permite evoluir para recursos como bytecode, LLVM IR, JIT, generics, pattern matching e gerenciamento de memória.
+A linguagem pode crescer para tipos, módulos, bytecode real, VM maior e futuramente backends mais avançados.
 
 ---
 
@@ -182,19 +159,17 @@ A arquitetura permite evoluir para recursos como bytecode, LLVM IR, JIT, generic
 
 A filosofia da PyxCore é baseada em uma ideia simples:
 
-> Uma linguagem deve ser fácil o suficiente para começar, organizada o suficiente para crescer e poderosa o suficiente para evoluir.
+> Uma linguagem deve ser pequena o suficiente para entender, organizada o suficiente para crescer e clara o suficiente para evoluir sem virar bagunça.
 
 A linguagem valoriza:
 
-- código limpo e legível;
-- sintaxe simples e expressiva;
-- estrutura interna organizada;
-- mensagens de erro compreensíveis;
-- crescimento gradual;
-- ferramentas integradas;
-- boa experiência para o desenvolvedor;
-- base preparada para estudos e projetos reais;
-- liberdade para evoluir sem perder simplicidade.
+- código limpo;
+- sintaxe simples;
+- arquitetura modular;
+- mensagens de erro melhores ao longo do tempo;
+- aprendizado real de compiladores;
+- base honesta;
+- evolução gradual.
 
 ---
 
@@ -207,7 +182,9 @@ Programa simples:
 
 ~~~pyx
 fn main() {
-    print("Olá, PyxCore!")
+    println("Bem-vindo ao PyxCore!")
+    let nome = "Mundo"
+    println("Olá, " + nome + "!")
 }
 ~~~
 
@@ -220,7 +197,7 @@ fn soma(a, b) {
 
 fn main() {
     let resultado = soma(10, 20)
-    print(resultado)
+    println("Resultado: " + resultado)
 }
 ~~~
 
@@ -231,9 +208,9 @@ fn main() {
     let idade = 18
 
     if idade >= 18 {
-        print("Acesso permitido")
+        println("Acesso permitido")
     } else {
-        print("Acesso negado")
+        println("Acesso negado")
     }
 }
 ~~~
@@ -245,7 +222,7 @@ fn main() {
     let contador = 0
 
     while contador < 5 {
-        print(contador)
+        println(contador)
         contador = contador + 1
     }
 }
@@ -258,7 +235,7 @@ fn main() {
   Como a PyxCore funciona
 </h2>
 
-A PyxCore segue uma estrutura de compilação organizada.
+A PyxCore segue um pipeline simples:
 
 ~~~txt
 Código .pyx
@@ -271,14 +248,12 @@ AST
     ↓
 Análise Semântica
     ↓
-Interpretador / VM experimental
-    ↓
-Runtime / Stdlib
+Runtime Interpretado
 ~~~
 
 ### <img src="https://api.iconify.design/material-symbols/filter-list.svg?color=%236366f1" width="22" /> Lexer
 
-O lexer lê o código-fonte e transforma caracteres em tokens.
+Transforma o texto do arquivo `.pyx` em tokens.
 
 Exemplo:
 
@@ -286,43 +261,31 @@ Exemplo:
 let nome = "PyxCore"
 ~~~
 
-Pode ser transformado em:
+Gera tokens como:
 
 ~~~txt
 LET
-IDENTIFIER
+IDENT
 EQUAL
 STRING
+EOF
 ~~~
 
 ### <img src="https://api.iconify.design/material-symbols/schema.svg?color=%23f97316" width="22" /> Parser
 
-O parser recebe tokens e constrói uma AST.
+Recebe tokens e monta a AST.
 
 ### <img src="https://api.iconify.design/material-symbols/account-tree.svg?color=%2306b6d4" width="22" /> AST
 
-A AST representa o programa de forma estruturada, com nós para funções, variáveis, expressões, chamadas, condições, loops e retornos.
+Representa o programa com nós para funções, variáveis, expressões, chamadas, condições, loops e retornos.
 
 ### <img src="https://api.iconify.design/material-symbols/rule.svg?color=%2322c55e" width="22" /> Análise semântica
 
-A análise semântica verifica se o código faz sentido além da sintaxe.
-
-Ela pode validar:
-
-- variáveis declaradas;
-- funções existentes;
-- escopos;
-- chamadas de função;
-- atribuições;
-- erros antes da execução.
+Valida nomes, escopos, funções e variáveis antes da execução.
 
 ### <img src="https://api.iconify.design/material-symbols/play-circle.svg?color=%2322c55e" width="22" /> Execução
 
-A execução atual pode acontecer por um interpretador simples. Também existe uma VM de bytecode experimental para evolução futura.
-
-### <img src="https://api.iconify.design/material-symbols/memory.svg?color=%23a855f7" width="22" /> LLVM experimental
-
-O projeto possui um backend LLVM experimental com `llvmlite`. Atualmente ele serve como base para estudos e testes de JIT, ainda sem integração completa com todos os nós da AST.
+A execução atual acontece por um interpretador. A VM de bytecode existe como base experimental para evolução futura.
 
 ---
 
@@ -335,75 +298,39 @@ O projeto possui um backend LLVM experimental com `llvmlite`. Atualmente ele ser
 pyxcore/
 ├── pyxcore/
 │   ├── compiler/
+│   │   ├── ast.py
+│   │   ├── errors.py
 │   │   ├── lexer.py
 │   │   ├── parser.py
-│   │   ├── ast_nodes.py
-│   │   ├── semantic.py
-│   │   ├── interpreter.py
 │   │   ├── pipeline.py
-│   │   ├── formatter.py
-│   │   ├── llvm_backend.py
-│   │   ├── jit.py
-│   │   ├── parser_generics.py
-│   │   ├── parser_pattern_matching.py
-│   │   └── ssa_optimizer.py
+│   │   ├── semantic.py
+│   │   └── token.py
 │   │
 │   ├── runtime/
-│   │   └── gc.py
-│   │
-│   ├── stdlib/
-│   │   ├── io.py
-│   │   ├── math.py
-│   │   ├── strings.py
-│   │   ├── collections.py
-│   │   ├── fs.py
-│   │   ├── jsonlib.py
-│   │   ├── time.py
-│   │   └── system.py
-│   │
-│   ├── vm/
-│   │   └── bytecode.py
-│   │
-│   ├── lsp/
-│   │   └── server.py
-│   │
-│   ├── package_registry/
-│   │   ├── client.py
-│   │   └── server.py
+│   │   ├── bytecode.py
+│   │   ├── interpreter.py
+│   │   └── vm.py
 │   │
 │   ├── tools/
-│   │   └── debugger.py
+│   │   ├── formatter.py
+│   │   └── test_runner.py
 │   │
 │   └── cli.py
 │
 ├── examples/
 │   ├── hello.pyx
-│   ├── functions.pyx
-│   └── conditions.pyx
+│   ├── math.pyx
+│   └── loop.pyx
 │
 ├── tests/
-│   ├── test_lexer_parser.py
-│   ├── test_interpreter.py
-│   └── test_vm.py
+│   └── basic.pyx
 │
-├── docs/
-│   ├── README.md
-│   ├── architecture.md
-│   ├── cli.md
-│   ├── stdlib.md
-│   └── verification.md
-│
-├── pyx.py
+├── install_pyxcore.cmd
+├── install_pyxcore.ps1
+├── uninstall_pyxcore.cmd
 ├── pyproject.toml
-├── requirements.txt
 ├── README.md
-├── BRANDING.md
-├── INSTALL.md
-├── GETTING_STARTED.md
-├── CONTRIBUTING.md
-├── STDLIB.md
-├── REFERENCE.md
-└── LICENSE
+└── TEST_RESULT.json
 ~~~
 
 ---
@@ -413,30 +340,27 @@ pyxcore/
   Instalação
 </h2>
 
-Clone o repositório:
-
-~~~bash
-git clone https://github.com/lipeedeveloper/pyxcore.git
-cd pyxcore
-~~~
-
-Instale em modo desenvolvimento:
+### Instalação pelo Python
 
 ~~~bash
 pip install -e .
 ~~~
 
-Instale com dependências extras opcionais:
+### Instalação no Windows
 
-~~~bash
-pip install -e ".[llvm,server,dev]"
+Abra o arquivo:
+
+~~~txt
+install_pyxcore.cmd
 ~~~
 
-As dependências extras são:
+Depois feche e abra o terminal.
 
-- `llvm`: suporte experimental a LLVM e JIT com `llvmlite`;
-- `server`: suporte ao registry local com FastAPI;
-- `dev`: ferramentas para testes.
+Teste:
+
+~~~bash
+pyx doctor
+~~~
 
 ---
 
@@ -445,116 +369,92 @@ As dependências extras são:
   CLI
 </h2>
 
+Diagnóstico:
+
+~~~bash
+pyx doctor
+~~~
+
+Mostrar versão:
+
+~~~bash
+pyx --version
+~~~
+
+Criar projeto:
+
+~~~bash
+pyx new meu_app
+cd meu_app
+~~~
+
 Executar arquivo `.pyx`:
 
 ~~~bash
-pyx run examples/hello.pyx
+pyx run main.pyx
+~~~
+
+Verificar sintaxe e semântica:
+
+~~~bash
+pyx check main.pyx
 ~~~
 
 Mostrar tokens:
 
 ~~~bash
-pyx tokens examples/hello.pyx
+pyx tokens main.pyx
 ~~~
 
 Mostrar AST:
 
 ~~~bash
-pyx ast examples/hello.pyx
+pyx ast main.pyx
 ~~~
 
 Formatar arquivo:
 
 ~~~bash
-pyx fmt examples/hello.pyx
+pyx fmt main.pyx
 ~~~
 
-Executar testes:
+Abrir REPL:
+
+~~~bash
+pyx repl
+~~~
+
+Rodar testes:
 
 ~~~bash
 pyx test
-~~~
-
-Executar VM de exemplo:
-
-~~~bash
-pyx vm 2 3
-~~~
-
-Executar JIT experimental:
-
-~~~bash
-pyx jit --return-value 7
-~~~
-
-Publicar pacote no registry local:
-
-~~~bash
-pyx publish meu-pacote --version 0.1.0
 ~~~
 
 ---
 
 <h2>
   <img src="https://api.iconify.design/material-symbols/library-books.svg?color=%236366f1" width="28" />
-  Biblioteca padrão
+  Recursos da linguagem
 </h2>
 
-A biblioteca padrão atual é implementada em Python e fica em:
+A sintaxe atual suporta:
 
 ~~~txt
-pyxcore/stdlib/
-~~~
-
-Módulos disponíveis:
-
-### <img src="https://api.iconify.design/material-symbols/print.svg?color=%2322c55e" width="22" /> IO
-
-Funções básicas de entrada e saída.
-
-~~~python
-println("Mensagem")
-readln("Digite algo: ")
-~~~
-
-### <img src="https://api.iconify.design/material-symbols/functions.svg?color=%23f97316" width="22" /> Math
-
-Funções e constantes matemáticas básicas.
-
-~~~python
-square(4)
-cube(3)
-clamp(10, 0, 5)
-~~~
-
-### <img src="https://api.iconify.design/material-symbols/text-fields.svg?color=%236366f1" width="22" /> Strings
-
-Funções para manipulação de texto.
-
-~~~python
-upper("pyxcore")
-lower("PYXCORE")
-trim("  texto  ")
-~~~
-
-### <img src="https://api.iconify.design/material-symbols/table-rows.svg?color=%23a855f7" width="22" /> Collections
-
-Funções auxiliares para listas e coleções.
-
-~~~python
-length([1, 2, 3])
-first([1, 2, 3])
-last([1, 2, 3])
-~~~
-
-### <img src="https://api.iconify.design/material-symbols/folder-open.svg?color=%23facc15" width="22" /> FS
-
-Funções básicas para arquivos.
-
-~~~python
-read("arquivo.txt")
-write("arquivo.txt", "conteúdo")
-exists("arquivo.txt")
+fn
+let
+return
+if / else
+while
+true / false / null
+strings
+números
+comentários //
+operações + - * / %
+comparações == != > >= < <=
+lógica && || !
+funções
+chamadas de função
+println / print
 ~~~
 
 ---
@@ -564,94 +464,29 @@ exists("arquivo.txt")
   Ferramentas de desenvolvimento
 </h2>
 
-### <img src="https://api.iconify.design/material-symbols/edit-note.svg?color=%236366f1" width="22" /> LSP experimental
-
-O projeto possui um servidor LSP experimental com:
-
-- autocomplete básico;
-- diagnósticos simples;
-- hover para símbolos conhecidos.
-
-### <img src="https://api.iconify.design/material-symbols/bug-report.svg?color=%23ef4444" width="22" /> Debugger experimental
-
-O debugger atual permite registrar breakpoints e eventos de execução. A integração completa com a VM ainda está em desenvolvimento.
-
 ### <img src="https://api.iconify.design/material-symbols/format-align-left.svg?color=%2306b6d4" width="22" /> Formatador
 
-O formatador aplica indentação simples em arquivos `.pyx`.
+Aplica indentação simples em arquivos `.pyx`.
 
 ~~~bash
-pyx fmt examples/hello.pyx
+pyx fmt main.pyx
 ~~~
 
 ### <img src="https://api.iconify.design/material-symbols/science.svg?color=%2322c55e" width="22" /> Test runner
 
-O test runner executa os testes do projeto.
+Executa arquivos `.pyx` dentro da pasta de testes.
 
 ~~~bash
 pyx test
 ~~~
 
----
+### <img src="https://api.iconify.design/material-symbols/terminal.svg?color=%23f97316" width="22" /> REPL
 
-<h2>
-  <img src="https://api.iconify.design/material-symbols/inventory-2.svg?color=%23f97316" width="28" />
-  Package registry experimental
-</h2>
-
-A PyxCore inclui um registry local experimental usando FastAPI.
-
-Instale as dependências:
+Permite testar expressões simples no terminal.
 
 ~~~bash
-pip install -e ".[server]"
+pyx repl
 ~~~
-
-Inicie o registry:
-
-~~~bash
-uvicorn pyxcore.package_registry.server:app --reload
-~~~
-
-Publique um pacote:
-
-~~~bash
-pyx publish meu-pacote --version 0.1.0
-~~~
-
----
-
-<h2>
-  <img src="https://api.iconify.design/material-symbols/speed.svg?color=%23facc15" width="28" />
-  LLVM e JIT experimental
-</h2>
-
-A PyxCore possui um backend LLVM experimental usando `llvmlite`.
-
-Instale as dependências:
-
-~~~bash
-pip install -e ".[llvm]"
-~~~
-
-Execute a demonstração:
-
-~~~bash
-pyx jit --return-value 7
-~~~
-
-Esse recurso atualmente gera e executa uma função `main` simples que retorna um inteiro. A integração completa com a AST da linguagem ainda está em desenvolvimento.
-
----
-
-<h2>
-  <img src="https://api.iconify.design/material-symbols/memory-alt.svg?color=%23ef4444" width="28" />
-  Gerenciamento de memória
-</h2>
-
-O projeto inclui um garbage collector experimental em Python, baseado em uma simulação de mark-and-sweep.
-
-Ele serve para estudo e evolução do runtime. Ainda não gerencia memória nativa de programas PyxCore.
 
 ---
 
@@ -660,24 +495,18 @@ Ele serve para estudo e evolução do runtime. Ainda não gerencia memória nati
   Testes
 </h2>
 
-Executar testes pela CLI:
+Rodar testes pela CLI:
 
 ~~~bash
 pyx test
 ~~~
 
-Executar testes diretamente com Python:
+Rodar um exemplo manualmente:
 
 ~~~bash
-python -m unittest discover tests
-~~~
-
-Testes principais:
-
-~~~txt
-tests/test_lexer_parser.py
-tests/test_interpreter.py
-tests/test_vm.py
+pyx run examples/hello.pyx
+pyx run examples/math.pyx
+pyx run examples/loop.pyx
 ~~~
 
 ---
@@ -690,92 +519,53 @@ tests/test_vm.py
 ### <img src="https://api.iconify.design/material-symbols/check-circle.svg?color=%2322c55e" width="22" /> Base atual
 
 - [x] Estrutura de package Python;
-- [x] CLI instalável;
+- [x] CLI `pyx`;
 - [x] Lexer;
 - [x] Parser;
 - [x] AST;
-- [x] Interpretador inicial;
 - [x] Análise semântica inicial;
-- [x] VM de bytecode;
-- [x] Biblioteca padrão base;
+- [x] Runtime interpretado;
+- [x] VM de bytecode simples;
+- [x] Formatter;
 - [x] Test runner;
-- [x] Formatador;
-- [x] LSP experimental;
-- [x] Registry local experimental;
-- [x] Backend LLVM experimental;
-- [x] JIT experimental;
-- [x] Documentação local em Markdown.
+- [x] Instalador Windows;
+- [x] Exemplos `.pyx`.
 
 ### <img src="https://api.iconify.design/material-symbols/pending-actions.svg?color=%23facc15" width="22" /> Próximos passos
 
 - [ ] Melhorar mensagens de erro;
-- [ ] Expandir parser;
-- [ ] Integrar imports e módulos ao parser principal;
-- [ ] Criar sistema de tipos mais completo;
-- [ ] Integrar AST ao backend LLVM;
-- [ ] Expandir VM de bytecode;
-- [ ] Conectar debugger com VM;
+- [ ] Criar sistema de tipos;
+- [ ] Adicionar imports e módulos;
 - [ ] Expandir biblioteca padrão;
-- [ ] Criar package manager com lockfile;
-- [ ] Expandir LSP;
-- [ ] Aumentar cobertura de testes.
+- [ ] Gerar bytecode real a partir da AST;
+- [ ] Expandir instruction set da VM;
+- [ ] Criar debugger integrado;
+- [ ] Criar mais testes automatizados;
+- [ ] Melhorar documentação técnica.
 
 ---
 
 <h2>
-  <img src="https://api.iconify.design/material-symbols/menu-book.svg?color=%236366f1" width="28" />
-  Documentação local
+  <img src="https://api.iconify.design/material-symbols/warning.svg?color=%23facc15" width="28" />
+  O que esta versão não possui
 </h2>
 
-A documentação do projeto fica dentro do próprio repositório.
+Esta versão **não possui**:
 
-~~~txt
-docs/
-├── README.md
-├── architecture.md
-├── cli.md
-├── stdlib.md
-└── verification.md
-~~~
+- IA integrada;
+- comando `pyx ask`;
+- Groq API;
+- LSP;
+- LLVM;
+- JIT;
+- package registry;
+- package manager;
+- website de documentação;
+- stdlib completa em `.pyx`;
+- sistema de tipos completo;
+- imports e módulos.
 
-O projeto não inclui website ou documentação web nesta fase.
-
----
-
-<h2>
-  <img src="https://api.iconify.design/material-symbols/school.svg?color=%23facc15" width="28" />
-  Para quem é a PyxCore?
-</h2>
-
-A PyxCore é indicada para:
-
-- pessoas que querem aprender sobre linguagens de programação;
-- desenvolvedores interessados em compiladores;
-- estudantes que querem estudar lexer, parser, AST, VM e runtime;
-- criadores que desejam construir uma linguagem própria;
-- programadores que gostam de projetos experimentais;
-- pessoas que querem estudar geração de código, LLVM e JIT.
-
----
-
-<h2>
-  <img src="https://api.iconify.design/material-symbols/compare-arrows.svg?color=%23f97316" width="28" />
-  Inspiração
-</h2>
-
-A PyxCore pode se inspirar em conceitos de várias linguagens modernas, sem deixar de buscar uma identidade própria.
-
-Algumas inspirações:
-
-- simplicidade de Python;
-- organização de Go;
-- produtividade de JavaScript;
-- segurança de Rust;
-- performance de C;
-- ferramentas modernas de TypeScript;
-- compilação avançada com LLVM.
-
-A ideia não é copiar uma linguagem existente, mas aprender com boas ideias e criar uma experiência própria.
+Esses recursos podem ser adicionados futuramente, mas não estão marcados como implementados nesta versão para manter o projeto honesto e profissional.
 
 ---
 
@@ -789,14 +579,13 @@ Contribuições são bem-vindas.
 Você pode ajudar com:
 
 - correção de bugs;
-- documentação;
-- exemplos;
+- exemplos `.pyx`;
 - testes;
-- compilador;
-- biblioteca padrão;
-- CLI;
-- ferramentas;
-- design da linguagem.
+- documentação;
+- melhorias no parser;
+- melhorias no runtime;
+- melhorias na VM;
+- melhorias na CLI.
 
 Fluxo básico:
 
@@ -820,7 +609,7 @@ https://github.com/lipeedeveloper/pyxcore
   Reportar problemas
 </h2>
 
-Caso encontre algum erro, abra uma issue no repositório:
+Caso encontre algum erro, abra uma issue:
 
 ~~~txt
 https://github.com/lipeedeveloper/pyxcore/issues
@@ -834,8 +623,7 @@ Inclua:
 - comportamento esperado;
 - sistema operacional;
 - versão do Python;
-- versão da PyxCore;
-- passos para reproduzir o erro.
+- passos para reproduzir.
 
 ---
 
@@ -869,8 +657,6 @@ Se você gostou da PyxCore, considere deixar uma estrela no repositório:
 https://github.com/lipeedeveloper/pyxcore
 ~~~
 
-Isso ajuda o projeto a crescer, mostra que existe interesse na linguagem e incentiva o desenvolvimento de novas funcionalidades.
-
 ---
 
 <div align="center">
@@ -881,7 +667,7 @@ Isso ajuda o projeto a crescer, mostra que existe interesse na linguagem e incen
 </h2>
 
 <p>
-  <strong>Uma linguagem simples na entrada, organizada na base e poderosa na evolução.</strong>
+  <strong>Uma linguagem simples na entrada, organizada na base e honesta na evolução.</strong>
 </p>
 
 <br/>
@@ -889,9 +675,5 @@ Isso ajuda o projeto a crescer, mostra que existe interesse na linguagem e incen
 <img src="https://img.shields.io/badge/made%20with-code-6366f1?style=for-the-badge&labelColor=000000" />
 <img src="https://img.shields.io/badge/built%20with-caf%C3%A9%20e%20persist%C3%AAncia-f97316?style=for-the-badge&labelColor=000000" />
 <img src="https://img.shields.io/badge/project-pyxcore-22c55e?style=for-the-badge&labelColor=000000" />
-
-<br/><br/>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:6366f1&height=120&section=footer" />
 
 </div>
