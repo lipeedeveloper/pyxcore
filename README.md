@@ -18,23 +18,11 @@
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/status-em%20desenvolvimento-111827?style=for-the-badge&labelColor=000000" />
-<img src="https://img.shields.io/badge/language-pyxcore-6366f1?style=for-the-badge&labelColor=000000" />
-<img src="https://img.shields.io/badge/compiler-pyx%20compiler-22c55e?style=for-the-badge&labelColor=000000" />
-<img src="https://img.shields.io/badge/runtime-python%20vm-f97316?style=for-the-badge&labelColor=000000" />
-<img src="https://img.shields.io/badge/focus-tooling-06b6d4?style=for-the-badge&labelColor=000000" />
-<h1 align="center">Inspirações:</h1>
+
 
 ###
 
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" alt="mongodb logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" alt="cplusplus logo"  />
+
 </div>
 
 ###
@@ -44,12 +32,7 @@
 
 <div align="center">
   <p>
-    <img src="https://api.iconify.design/material-symbols/code.svg?color=%236366f1" width="20" />
-    Simples para começar.
-    <img src="https://api.iconify.design/material-symbols/account-tree.svg?color=%2306b6d4" width="20" />
-    Organizada para crescer.
-    <img src="https://api.iconify.design/material-symbols/rocket-launch.svg?color=%2322c55e" width="20" />
-    Preparada para evoluir.
+   
   </p>
 </div>
 
